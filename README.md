@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Te doy la bienvenida a mi solución de la prueba técnica de MELI 👨🏽‍💻
 
-## Getting Started
+Esta solución fue hecha en [Next.js](https://nextjs.org/) con el toolchain: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Quiero aclarar lo único en español serán los comentarios y documentación básica como este README, el resto (variables, funciones, etc...) quize manejarlo en inglés teniendo en cuenta la escalabilidad.
 
-First, run the development server:
-
-```bash
+Puedes correr el servidor con
+```
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego, podrás ingresar a [http://localhost:3000](http://localhost:3000) para ver los resultados.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Si deseas ingresar a las rutas de la API puedes hacerlo con: [http://localhost:3000/api](http://localhost:3000/api) pero si lo que quieres es conocer el código, debes dirigirte a la siguiente ruta ```src/pages/api/```.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Día 1 - Inicialización y configuración del proyecto
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Establecí reglas y configuraciones (path aliases, etc...) del proyecto con:
+    - [Prettier](https://prettier.io/docs/en/index.html)
+    - [ESLint](https://eslint.org/docs/latest/)
+        - [jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) para accesibilidad y AST.
 
-## Learn More
+2. Estilos (SASS) y estructura de carpetas y archivos (Clean Architecture, Atomic Design).
 
-To learn more about Next.js, take a look at the following resources:
+## Despliegue en Vercel 🚀
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The easiest way to deploy your Next.js app is to use the [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
