@@ -1,53 +1,4 @@
-// Fuentes
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova/Fontspring-DEMO-proximanova-bold.otf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova/Fontspring-DEMO-proximanova-medium.otf');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova/Fontspring-DEMO-proximanova-regular.otf');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../assets/fonts/ProximaNova/Fontspring-DEMO-proximanova-light.otf');
-  font-weight: 100;
-}
-
-// aquí opté por definir un layout básico de un sistema de diseño y en lugar de segmentarlo por etiqueta lo hice por uso y/o su className
-$fontSize-price: 4.6rem; // h1
-$fontSize-productDescriptionTitle: 2.8rem; // h2
-$fontSize-productName: 2.4rem;  // h3
-$fontSize-searchBar: 1.8rem; // h4
-$fontSize-paragraph: 1.6rem; // p
-$fontSize-small: 1.4rem;
-$fontSize-city: 1.2rem;
-
-// Colores
-$primary: #FFE600;
-$secondary: #3483FA;
-$black-500: #333;
-$gray-500: #666;
-$gray-400: #999;
-$gray-100: #eee;
-
-// Propiedades del box model
-$margin-small: 16px;
-$margin-medium: 32px;
-
-$borderRadius-small: 4px;
-
-$padding-small: 16px;
-$padding-medium: 32px;
+@import 'variables.scss';
 
 html,
 body {
@@ -66,14 +17,7 @@ a {
   text-decoration: none;
 }
 
-// En caso de Dark mode...
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }
+::placeholder {
+  font-family: 'Proxima Nova', sans-serif;
+  color: $gray-400;
+}
