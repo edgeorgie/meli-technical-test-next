@@ -1,0 +1,25 @@
+@import 'sass/variables.scss';
+
+.breadcrumb-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: $margin-small 0;
+  padding: 0 20%;
+
+  .breadcrumb__anchors-container {
+    color: $gray-400;
+    font-size: $fontSize-small;
+    font-weight: 500;
+  }
+
+  .breadcrumb__anchor--active {
+    color: $gray-500;
+    font-weight: 700;
+  }
+
+  .breadcrumb__anchor {
+    margin-right: 5px;
+  }
+}

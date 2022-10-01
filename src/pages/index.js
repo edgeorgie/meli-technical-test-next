@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from 'sass/Home.module.scss'
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -54,3 +54,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
