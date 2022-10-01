@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: 'Proxima Nova', Helvetica, sans-serif;
   font-size: 62.5%;
+  background-color: $gray-100;
 }
 
 * {
@@ -17,7 +18,13 @@ a {
   text-decoration: none;
 }
 
+hr {
+  width: 95%;
+  border: 1px solid $gray-100;
+}
+
 ::placeholder {
   font-family: 'Proxima Nova', sans-serif;
   color: $gray-400;
 }
+

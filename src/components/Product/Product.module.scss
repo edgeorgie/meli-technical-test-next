@@ -1,1 +1,42 @@
 @import 'sass/variables.scss';
+
+.product-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+
+  padding: $padding-small;
+  .product-info-container {
+    display: flex;
+
+    .product-info-container__img {
+      border-radius: $rounded-small;
+    }
+  }
+}
+
+.product-info-content {
+  width: 50%;
+  margin-left: 16px;
+  color: $black-500;
+}
+
+.product-info-content__title {
+  font-size: $fontSize-productName;
+  font-weight: 500;
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+
+.product-info-description {
+  font-size: $fontSize-searchBar;
+  font-weight: normal;
+}
+
+.product-place {
+  color: $gray-400;
+  font-size: $fontSize-city;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
