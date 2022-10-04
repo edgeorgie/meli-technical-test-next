@@ -10,6 +10,12 @@ REPOS:
 
 Quiero aclarar que lo único en español serán los comentarios y documentación básica como este README, el resto (variables, funciones, etc...) quize manejarlo en inglés teniendo en cuenta la escalabilidad.
 
+### Acerca del Front-end...
+
+### Acerca del Back-end...
+1. Opté por usar Axios y crear una instancia como tal para permitirme así tener un mejor dominio y manipulación de las llamadas a la API y sus respuestas (teniendo en cuenta la escalabilidad, esto hacía más sencillo el hecho de que se podían crear objetos para estructurar todos los distintos llamados a la API para poder invocarlos y pasar por parametros las urls y los params con una simple razón: mejor legibilidad y disminuye lo extenso del código que podría generar no hacerlo con instancias de Axios), y eso me facilitó a su vez evitar las conversiones a JSON.
+2. Con respecto a los endpoints, normalmente veo que las APIs, aparte de tener la opción de paginación, a su vez tienen una opción/query para filtrar por cantidad de resultados, decidí manejarlo de una forma más sencilla pero hard-code implementado el método slice para delimitar a los 4 productos que la prueba exige.
+
 ### Local
 Puedes correr el servidor del front-end y back-end (separados) con
 ```
