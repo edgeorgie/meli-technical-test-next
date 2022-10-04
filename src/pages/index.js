@@ -9,7 +9,6 @@ const Home = () => {
         <meta name="description" content="Esta es la solución de Edwin Jorge para la prueba técnica del cargo de Front-end Developer en Mercado Libre." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
     </div>
   )
 }
