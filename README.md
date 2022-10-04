@@ -56,7 +56,7 @@ Si deseas ingresar a las rutas de la API puedes hacerlo con:
 
 ### Día 3 (02 oct) -> Domingo, decidí tomar un break 😴
 
-### Día 4 (03 oct) - Testing y despliegue en Railway 🚀 | Back-end
+### Día 4 (03 oct) - Testing y despliegue 🚀 | Back-end
 
 1. Testing de rutas y respuestas con [Jest](https://jestjs.io/) y [Supertest](https://www.npmjs.com/package/supertest).
 2. [Despligue en Railway](https://meli-technical-test-backend-production-78cf.up.railway.app/api/items).
