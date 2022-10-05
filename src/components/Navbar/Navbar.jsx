@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react'
+import { useRouter } from 'next/router'
 import { searchItem } from 'services/searchItem'
+import { useProducts } from 'context/products'
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from 'assets/images/Logo_ML@2x.png'
@@ -9,13 +11,34 @@ import styles from './Navbar.module.scss'
 
 const Navbar = () => {
 	const [items, setItems] = useState([])
-	const searchRef = useRef()
+	const { setProducts } = useProducts()
+	
+	const router = useRouter()
 
-	const handleChange = async () => {
+	const searchRef = useRef()
+	
+	const handleChange = async (e) => {
+		e.preventDefault()
 		const query = searchRef.current.value
+
 		const res = await searchItem(query)
 
 		setItems(res)
+	}
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		const query = searchRef.current.value
+
+		if (!query.trim()) return
+		const res = await searchItem(query)
+		setProducts(res)
+		
+		router.push('/items')
+	}
+
+	const onEnter = (e) => {
+		if (e.key === 'Enter') return handleSubmit(e)
 	}
 
   return (
@@ -26,8 +49,8 @@ const Navbar = () => {
 						<Image width={60} height={38} src={logo} alt="Logo de Mercado Libre, manos estrechadas" />
 					</a>
 				</Link>
-				<form className={styles['navbar-form']}>
-					<input ref={searchRef} className={styles['navbar-form__input']} type="text" placeholder="Nunca dejes de buscar" onChange={handleChange} />
+				<form className={styles['navbar-form']} onSubmit={handleSubmit}>
+					<input ref={searchRef} className={styles['navbar-form__input']} type="text" placeholder="Nunca dejes de buscar" onChange={handleChange} onKeyDown={onEnter} required/>
 					<button className={styles['navbar-form__button']} type="submit">
 						<Image width={20} height={20} src={search_icon}></Image>
 					</button>

@@ -1,5 +1,5 @@
 import Navbar from 'components/Navbar/Navbar'
-import ProductsProvider from 'context'
+import ProductsProvider from 'context/products'
 import 'sass/globals.scss'
 
 function MyApp({ Component, pageProps }) {
