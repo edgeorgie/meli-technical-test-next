@@ -8,16 +8,16 @@ export const useProducts = () => {
 }
 
 const ProductsProvider = ({ children }) => {
-	const [products, setProducts] = useState([])
 	const [categories, setCategories] = useState([])
+	const [products, setProducts] = useState([])
 
 	return (
 		<ProductsContext.Provider
 			value={{
-				products,
-				setProducts,
 				categories,
 				setCategories,
+				products,
+				setProducts,
 			}}
 		>
 			{children}

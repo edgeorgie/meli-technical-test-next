@@ -44,7 +44,7 @@ const Navbar = () => {
 	}
 
   return (
-		<header>
+		<header role='header'>
 			<nav className={styles['navbar-container']}>
 				<Link href="/">
 					<a>
