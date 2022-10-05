@@ -2,7 +2,7 @@
 
 ## TL;DR 👻 
 
-La solución está dividida en 2 repositorios, por el lado del [Front-end](https://github.com/edgeorgie/meli-technical-test-next) fue hecha en [Next.js](https://nextjs.org/) con el toolchain: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). El [Back-end](https://github.com/edgeorgie/meli-technical-test-backend) fue hecho de acuerdo a lo especificado: Node.js y Express.js, y [desplegué el back-end](https://meli-technical-test-backend-production-78cf.up.railway.app/api/items) en [Railway](https://railway.app/).
+La solución está dividida en 2 repositorios, por el lado del [Front-end](https://github.com/edgeorgie/meli-technical-test-next) fue hecha en [Next.js](https://nextjs.org/) con el toolchain: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) y [desplegada en Vercel](https://meli-technical-test-next.vercel.app/). El [Back-end](https://github.com/edgeorgie/meli-technical-test-backend) fue hecho de acuerdo a lo especificado: Node.js y Express.js, y [desplegué el back-end](https://meli-technical-test-backend-production-78cf.up.railway.app/api/items) en [Railway](https://railway.app/).
 
 REPOS: 
 - Solución [Front-end](https://github.com/edgeorgie/meli-technical-test-next)
@@ -11,6 +11,8 @@ REPOS:
 Quiero aclarar que lo único en español serán los comentarios y documentación básica como este README, el resto (variables, funciones, etc...) quize manejarlo en inglés teniendo en cuenta la escalabilidad.
 
 ### Acerca del Front-end...
+1. Decidí tomarme la libertad de crear una búsqueda con sugerencias apesar de que perjudica un poco la UX por el detalle de que no se oculta al hacer un click afuera de ese recuedro.
+2. Creé la estructura para que fuese sencillo implementar server-side rendering sin embargo, no pude sacarle el máximo provecho debido a las limitantes de tiempo que tuve, sin embargo, considero que la forma adecuada (técnicamente hablando) es utilizar `getStaticProps` en lugar de `getServerSideProps`, la razón es que para esta prueba solo se deben mostrar 4 elementos y a su vez, en el backend se evita que se tengan que reenderizar o pasar por props al cliente (ssr) más de 4, otra razón fundamental es el hecho de que la API no va a necesitar constantes actualizaciones por lo que el SSR solo se haría cada vez que se hace Build, permitiendo que sea más económico si lo desean medir con E2C.
 
 ### Acerca del Back-end...
 1. Opté por usar Axios y crear una instancia como tal para permitirme así tener un mejor dominio y manipulación de las llamadas a la API y sus respuestas (teniendo en cuenta la escalabilidad, esto hacía más sencillo el hecho de que se podían crear objetos para estructurar todos los distintos llamados a la API para poder invocarlos y pasar por parametros las urls y los params con una simple razón: mejor legibilidad y disminuye lo extenso del código que podría generar no hacerlo con instancias de Axios), y eso me facilitó a su vez evitar las conversiones a JSON.
@@ -69,4 +71,4 @@ Si deseas ingresar a las rutas de la API puedes hacerlo con:
 5. Página de detalle de producto.
 6. Correción de los Head de cada página para mejorar el SEO.
 7. Testing con Jest y react-testing-library.
-8. Deploy en Vercel 🤩.
+8. [Deploy en Vercel](https://meli-technical-test-next.vercel.app/) 🤩.
