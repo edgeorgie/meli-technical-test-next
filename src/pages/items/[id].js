@@ -19,7 +19,7 @@ const ProductDetail = () => {
 	}, [id])
 
   return (
-		<main className={styles['product-detail-container']}>
+		<main role="product-detail" className={styles['product-detail-container']}>
 			<Head>
 				<title>Prueba técnica - MELI | Edwin Jorge</title>
 				<meta name="description" content="Esta es la solución de Edwin Jorge para la prueba técnica del cargo de Front-end Developer en Mercado Libre." />
