@@ -59,14 +59,14 @@ Si deseas ingresar a las rutas de la API puedes hacerlo con:
 1. Testing de rutas y respuestas con [Jest](https://jestjs.io/) y [Supertest](https://www.npmjs.com/package/supertest).
 2. [Despligue en Railway](https://meli-technical-test-backend-production-78cf.up.railway.app/api/items).
 
-### Día 5 (05 oct) - Navegación programática | Front-end
+### Día 5 (05 oct) - Navegación programática, Testing & Deploy 🚀 | Front-end
 
 1. Implementación del servicio de búsqueda en el cliente de la aplicación.
     - FEATURE: búsqueda con sugerencias de texto autocompletado.
 2. Contexto para los productos, detalle y loading.
 3. /items muestra los 4 resultados primarios de búsqueda.
 4. Redirección a /items/:id al hacer click en un producto.
-
-### Despliegue en Vercel 🚀
-
-The easiest way to deploy your Next.js app is to use the [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Página de detalle de producto.
+6. Correción de los Head de cada página para mejorar el SEO.
+7. Testing con Jest y react-testing-library.
+8. Deploy en Vercel 🤩.
