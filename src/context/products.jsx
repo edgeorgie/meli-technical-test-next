@@ -8,15 +8,12 @@ export const useProducts = () => {
 }
 
 const ProductsProvider = ({ children }) => {
-	const [loading, setLoading] = useState(false)
 	const [products, setProducts] = useState([])
 	const [categories, setCategories] = useState([])
 
 	return (
 		<ProductsContext.Provider
 			value={{
-				loading,
-				setLoading,
 				products,
 				setProducts,
 				categories,

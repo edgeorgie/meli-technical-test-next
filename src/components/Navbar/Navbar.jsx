@@ -35,8 +35,6 @@ const Navbar = () => {
 
 		setProducts(res.items)
 		setCategories(res?.categories)
-
-		console.log(res)
 		
 		router.push('/items')
 	}

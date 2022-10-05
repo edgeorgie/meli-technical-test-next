@@ -4,6 +4,7 @@ import { searchProductDetail } from 'services/searchProductDetail'
 import Image from 'next/image'
 import Head from 'next/head'
 import styles from 'sass/ProductDetail.module.scss'
+import placeholder from 'assets/images/placeholder.jpg'
 
 const ProductDetail = () => {
 	const [details, setDetails] = useState([])
@@ -27,7 +28,7 @@ const ProductDetail = () => {
 			</Head>
 			<section className={styles['product-detail-principal']}>
 				<div className={styles['product-detail-principal__img']}>
-					<Image src={details?.picture} width={680} height={680} alt={details?.title} />
+					<Image src={details?.picture || placeholder} width={680} height={680} alt={details?.title} />
 				</div>
 
 				<div className={styles['product-detail-principal__info']}>
