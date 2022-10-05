@@ -3,5 +3,5 @@ const API_SEARCH_ENDPOINT = 'https://meli-technical-test-backend-production-78cf
 export const searchItem = async (query) => {
   const res = await fetch(`${API_SEARCH_ENDPOINT}${query}`).then(res => res.json())
 
-  return res.items
+  return res
 }

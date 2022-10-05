@@ -10,7 +10,7 @@ export const useProducts = () => {
 const ProductsProvider = ({ children }) => {
 	const [loading, setLoading] = useState(false)
 	const [products, setProducts] = useState([])
-	const [productDetail, setProductDetail] = useState([])
+	const [categories, setCategories] = useState([])
 
 	return (
 		<ProductsContext.Provider
@@ -19,8 +19,8 @@ const ProductsProvider = ({ children }) => {
 				setLoading,
 				products,
 				setProducts,
-				productDetail,
-				setProductDetail,
+				categories,
+				setCategories,
 			}}
 		>
 			{children}

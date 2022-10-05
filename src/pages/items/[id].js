@@ -12,7 +12,6 @@ const ProductDetail = () => {
 	useEffect(() => {
 		(async () => {
 			const results = await searchProductDetail(id)
-			console.log('results', results)
 			setDetails(results)
 		})()
 
@@ -28,7 +27,7 @@ const ProductDetail = () => {
 			</Head>
 			<section className={styles['product-detail-principal']}>
 				<div className={styles['product-detail-principal__img']}>
-					<Image src={details.picture} width={680} height={680} alt={details.title} />
+					<Image src={details?.picture} width={680} height={680} alt={details?.title} />
 				</div>
 
 				<div className={styles['product-detail-principal__info']}>
@@ -44,7 +43,7 @@ const ProductDetail = () => {
 			</section>
 			<section className={styles['product-detail-content']}>
 				<h3 className={styles['product-detail-content__title']}>Descripción del producto</h3>
-				<p className={styles['product-detail-content__paragraph']}>{details.description}</p>
+				<p className={styles['product-detail-content__paragraph']}>{details?.description}</p>
 			</section>
 		</main>
 	)

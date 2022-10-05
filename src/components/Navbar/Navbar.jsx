@@ -11,7 +11,7 @@ import styles from './Navbar.module.scss'
 
 const Navbar = () => {
 	const [items, setItems] = useState([])
-	const { setProducts } = useProducts()
+	const { setProducts, setCategories } = useProducts()
 	
 	const router = useRouter()
 
@@ -23,7 +23,7 @@ const Navbar = () => {
 
 		const res = await searchItem(query)
 
-		setItems(res)
+		setItems(res.items)
 	}
 
 	const handleSubmit = async (e) => {
@@ -32,7 +32,11 @@ const Navbar = () => {
 
 		if (!query.trim()) return
 		const res = await searchItem(query)
-		setProducts(res)
+
+		setProducts(res.items)
+		setCategories(res?.categories)
+
+		console.log(res)
 		
 		router.push('/items')
 	}
