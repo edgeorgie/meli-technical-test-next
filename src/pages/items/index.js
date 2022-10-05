@@ -1,8 +1,11 @@
+import { useProducts } from "context/products"
 import Product from "components/Product/Product"
 import Head from "next/head"
 import styles from 'sass/Items.module.scss'
 
 const Items = () => {
+	const { products } = useProducts()
+
 	return (
 		<main className={styles['items-container']}>
 			<Head>
@@ -11,10 +14,13 @@ const Items = () => {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Product />
-			<Product />
-			<Product />
-			<Product />
+			{
+				products.map(product => {
+					return (
+						<Product key={product.id} id={product.id} picture={product.picture} price={product.price} title={product.title} free_shipping={product.free_shipping}/>
+					)
+				})
+			}
 		</main>
 	)
 }

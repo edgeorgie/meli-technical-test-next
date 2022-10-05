@@ -54,14 +54,18 @@ Si deseas ingresar a las rutas de la API puedes hacerlo con:
 6. Definición de la estructura y lógica de los controladores.
 7. Refactorización.
 
-### Día 3 (02 oct) -> Domingo, decidí tomar un break 😴
-
 ### Día 4 (03 oct) - Testing y despliegue 🚀 | Back-end
 
 1. Testing de rutas y respuestas con [Jest](https://jestjs.io/) y [Supertest](https://www.npmjs.com/package/supertest).
 2. [Despligue en Railway](https://meli-technical-test-backend-production-78cf.up.railway.app/api/items).
 
-### Día 4 (03 oct) -
+### Día 5 (05 oct) - Navegación programática | Front-end
+
+1. Implementación del servicio de búsqueda en el cliente de la aplicación.
+    - FEATURE: búsqueda con sugerencias de texto autocompletado.
+2. Contexto para los productos, detalle y loading.
+3. /items muestra los 4 resultados primarios de búsqueda.
+4. Redirección a /items/:id al hacer click en un producto.
 
 ### Despliegue en Vercel 🚀
 
