@@ -62,7 +62,7 @@ const Navbar = () => {
 						{items.map((item) => {
 							return (
 								<li key={item.id}>
-									<Link href={`items/${item.id}`}>
+									<Link href={`/items/${item.id}`}>
 										<a>{item.title}</a>
 									</Link>
 								</li>
